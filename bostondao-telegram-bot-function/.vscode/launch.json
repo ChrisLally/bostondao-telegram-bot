@@ -7,7 +7,7 @@
       "functionName": "bostondao-telegram-bot",
       "region": "us-central1",
       "gen": "GEN_1",
-      "revision": "3",
+      "revision": "7",
       "entryPoint": "handle_request",
       "runtime": "python311",
       "testInput": ""
