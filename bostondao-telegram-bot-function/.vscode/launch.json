@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "name": "Deploy Cloud Function",
+      "type": "cloudcode.cloudfunctions",
+      "request": "launch",
+      "functionName": "bostondao-telegram-bot",
+      "region": "us-central1",
+      "gen": "GEN_1",
+      "revision": "3",
+      "entryPoint": "handle_request",
+      "runtime": "python311",
+      "testInput": ""
+    }
+  ]
+}
