@@ -1,16 +1,16 @@
 {
-  "configurations": [
-    {
-      "name": "Deploy Cloud Function",
-      "type": "cloudcode.cloudfunctions",
-      "request": "launch",
-      "functionName": "bostondao-telegram-bot",
-      "region": "us-central1",
-      "gen": "GEN_1",
-      "revision": "7",
-      "entryPoint": "handle_request",
-      "runtime": "python311",
-      "testInput": ""
-    }
-  ]
+    "configurations": [
+        {
+            "name": "Deploy Cloud Function",
+            "type": "cloudcode.cloudfunctions",
+            "request": "launch",
+            "functionName": "bostondao-telegram-bot",
+            "gen": "GEN_1",
+            "revision": "23",
+            "entryPoint": "main",
+            "testInput": "main.py",
+            "region": "us-central1",
+            "runtime": "python312"
+        }
+    ]
 }

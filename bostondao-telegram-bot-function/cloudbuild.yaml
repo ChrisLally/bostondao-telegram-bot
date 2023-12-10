@@ -1,0 +1,20 @@
+steps:
+  # Step 1: Build and push the container image using Cloud Buildpacks
+  - name: "gcr.io/cloud-builders/gcp-workloads"
+    args: ["builds", "submit", "--pack", "image", "--builder=gcr.io/buildpacks/builder:v1", "--tag=gcr.io/norse-quest-403404/bostondao-telegram-container"]
+
+  # Step 2: Deploy to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "run"
+      - "deploy"
+      - "bostondao-telegram-container"
+      - "--image"
+      - "gcr.io/norse-quest-403404/bostondao-telegram-container"
+      - "--platform"
+      - "managed"
+      - "--region"
+      - "us-central1"  # Replace with your desired region
+      - "--port"
+      - "8080"
+      - "--allow-unauthenticated"
