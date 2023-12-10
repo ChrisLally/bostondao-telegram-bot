@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from telegram import KeyboardButton, ReplyKeyboardMarkup, Bot
 from telegram import ForceReply, Update
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
-
+ 
 
 local = not bool(os.getenv("PRODUCTION"))
 if local:
@@ -45,7 +45,7 @@ def initialize_bot():
    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo))
    return application
 
-def main(request=None): # CLOUD FUNCTION ENTRY POINT
+def main():
    # Create the bot instance and start polling.
    application = initialize_bot()
    #application.run_polling(allowed_updates=Update.ALL_TYPES)
